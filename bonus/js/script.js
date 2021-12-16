@@ -29,14 +29,24 @@ var app = new Vue({
         //         this.counter = this.images.length -1;
         //     }
         // },
-        image: setInterval (function()  {
+        // image: function () {
+        //     setInterval (function()  {
+        //         this.counter += 1;
+        //         if (this.counter > this.images.length - 1) {
+        //             this.counter = 0;
+        //         }
+        //     }, 3000)
+        //     console.log(image)
+        // }
+    },
+    created() {
+        
+        setInterval (() => {
             this.counter += 1;
             if (this.counter > this.images.length - 1) {
                 this.counter = 0;
             }
         }, 3000)
-    },
-    created() {
         
     }
   })
